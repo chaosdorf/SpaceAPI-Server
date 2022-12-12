@@ -13,5 +13,6 @@ FROM gcr.io/distroless/static-debian11
 
 USER nonroot:nonroot
 CMD ["/app"]
+WORKDIR /data
 
 COPY --from=build /go/bin/app /
