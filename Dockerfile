@@ -1,9 +1,18 @@
-FROM golang:1.9
+FROM golang:1.18 as build
 
-WORKDIR /go/src/github.com/vspaceone/SpaceAPI-Server
+WORKDIR /go/src/app
 COPY . .
 
-RUN go get -d -v ./...
-RUN go install -v ./...
+RUN go mod download
+RUN go vet -v
+RUN go test -v
 
-ENTRYPOINT ["SpaceAPI-Server", "serve"]
+RUN CGO_ENABLED=0 go build -o /go/bin/app
+
+FROM gcr.io/distroless/static-debian11
+
+USER nonroot:nonroot
+CMD ["/app"]
+WORKDIR /data
+
+COPY --from=build /go/bin/app /
