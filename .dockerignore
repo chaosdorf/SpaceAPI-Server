@@ -1,5 +1,2 @@
 Dockerfile
-*.db
-config.json
-override.json
-token
+data/

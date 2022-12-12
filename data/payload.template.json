@@ -1,0 +1,42 @@
+{
+  "api": "0.13",
+  "api_compatibility": [
+    "14"
+  ],
+  "space": "Chaosdorf",
+  "logo": "https://chaosdorf.de/wp-content/uploads/2020/04/chaosdorf-hexagon-micro.png",
+  "url": "https://chaosdorf.de",
+  "location": {
+    "address": "Sonnenstr. 58, 40227 D\u00fcsseldorf, Germany",
+    "lon": 6.79969,
+    "lat": 51.21261
+  },
+  "contact": {
+    "email": "mail@chaosdorf.de",
+    "irc": "irc://irc.oftc.net/chaosdorf",
+    "twitter": "@chaosdorf",
+    "mastodon": "@chaosdorf@chaos.social"
+  },
+  "issue_report_channels": [
+    "email"
+  ],
+  "feeds": {
+    "blog": {
+      "url": "https://chaosdorf.de/feed/",
+      "type": "rss"
+    },
+    "calendar": {
+      "url": "https://chaosdorf.de/~derf/cccd.ics",
+      "type": "ical"
+    }
+  },
+  "state": {
+    "open": true,
+    "message": "Event",
+    "lastchange": 1337
+  },
+  "projects": [
+    "https://wiki.chaosdorf.de/Projects",
+    "https://github.com/chaosdorf"
+  ]
+}
